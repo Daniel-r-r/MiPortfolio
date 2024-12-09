@@ -2,97 +2,156 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css">
-    <title>Portfolio Personal</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css">
+  <title>Portfolio Personal</title>
 </head>
 
 <body>
 
-    <nav>
-        <div class="nav-logo">
-            <a href="#">
-                <img src="images/1.png">
-            </a>
+  <nav>
+    <div class="nav-logo">
+      <a href="#">
+        <img src="images/1.png">
+      </a>
 
-        </div>
+    </div>
 
-        <ul class="nav-links">
-            <li class="link"><a href="#">Inicio</a></li>
-            <li class="link"><a href="#">Conocimientos</a></li>
-            <li class="link"><a href="#">Proyectos</a></li>
-            <li class="link"><a href="#">Sobre Mí</a></li>
-        </ul>
-        <button class="btn">Contáctame</button>
-    </nav>
+    <ul class="nav-links">
+      <li class="link"><a href="#">Inicio</a></li>
+      <li class="link"><a href="#">Conocimientos</a></li>
+      <li class="link"><a href="#">Proyectos</a></li>
+      <li class="link"><a href="#">Sobre Mí</a></li>
+    </ul>
+    <button class="btn">Contáctame</button>
+  </nav>
 
-    <header class="container">
-        <div class="content">
-            <span class="blur"></span>
-            <span class="blur"></span>
-            <h4>LA MEJOR OPCION EN UN MAR DE POSIBILIDADES</h4>
-            <h1>Hola! Soy <span> Daniel</span>, <br> Full Stack Developer</h1>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit nisi ad exercitationem minima libero
-                ex totam aspernatur nemo! Voluptates tenetur, maiores quos soluta autem ea labore. Facilis, non nisi.
-                Quas.
-            </p>
-            <button class="btn">Comencemos</button>
-        </div>
+  <header class="container">
+    <div class="content">
+      <span class="blur"></span>
+      <span class="blur"></span>
+      <h4>LA MEJOR OPCION EN UN MAR DE POSIBILIDADES</h4>
+      <h1>Hola! Soy <span> Daniel</span>, <br> Full Stack Developer</h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit nisi ad exercitationem minima libero
+        ex totam aspernatur nemo! Voluptates tenetur, maiores quos soluta autem ea labore. Facilis, non nisi.
+        Quas.
+      </p>
+      <button class="btn">Comencemos</button>
+    </div>
 
-        <div class="image">
-            <img src="images/prueba.png">
-        </div>
-    </header>
+    <div class="image">
+      <img src="images/3.png">
+    </div>
+  </header>
 
-    <section class="container projects-section">
-        <h2 class="header">My Projects</h2>
-        <div class="carousel-container">
-            <button class="prev-btn">&lt;</button>
-            <div class="projects-wrapper">
-              <div class="projects-container">
-                <div class="project-card">
-                  <h3>Project 1</h3>
-                  <p>Brief description of Project 1.</p>
-                  <a href="https://github.com/">View on GitHub</a>
-                </div>
-                <div class="project-card">
-                  <h3>Project 2</h3>
-                  <p>Brief description of Project 2.</p>
-                  <a href="https://github.com/">View on GitHub</a>
-                </div>
-                <div class="project-card">
-                  <h3>Project 3</h3>
-                  <p>Brief description of Project 3.</p>
-                  <a href="https://github.com/">View on GitHub</a>
-                </div>
-                <div class="project-card">
-                  <h3>Project 4</h3>
-                  <p>Brief description of Project 4.</p>
-                  <a href="https://github.com/">View on GitHub</a>
-                </div>
-                <div class="project-card">
-                  <h3>Project 5</h3>
-                  <p>Brief description of Project 5.</p>
-                  <a href="https://github.com/">View on GitHub</a>
-                </div>
-                <div class="project-card">
-                  <h3>Project 6</h3>
-                  <p>Brief description of Project 6.</p>
-                  <a href="https://github.com/">View on GitHub</a>
-                </div>
+  <section class="container projects-section">
+    <h2 class="header">Proyectos</h2>
+    <div class="carousel-container">
+      <button class="nav-button prev" onclick="prevSlide()">•</button>
+      <div class="projects-wrapper">
+        <div class="projects-container">
+
+          <div class="project-card">
+            <a href="https://github.com/your-project-link" target="_blank">
+              <img src="https://via.placeholder.com/300x150" alt="Project Preview">
+              <div class="content">
+                <h3>Project Title</h3>
+                <p>Brief description of the project goes here.</p>
               </div>
-            </div>
-            <button class="next-btn">&gt;</button>
+            </a>
           </div>
-    </section>
+
+        <div class="project-card">
+          <a href="https://github.com/your-project-link" target="_blank">
+            <img src="https://via.placeholder.com/300x150" alt="Project Preview">
+            <div class="content">
+              <h3>Project Title</h3>
+              <p>Brief description of the project goes here.</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="project-card">
+          <a href="https://github.com/your-project-link" target="_blank">
+            <img src="https://via.placeholder.com/300x150" alt="Project Preview">
+            <div class="content">
+              <h3>Project Title</h3>
+              <p>Brief description of the project goes here.</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="project-card">
+          <a href="https://github.com/your-project-link" target="_blank">
+            <img src="https://via.placeholder.com/300x150" alt="Project Preview">
+            <div class="content">
+              <h3>Project Title</h3>
+              <p>Brief description of the project goes here.</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="project-card">
+          <a href="https://github.com/your-project-link" target="_blank">
+            <img src="https://via.placeholder.com/300x150" alt="Project Preview">
+            <div class="content">
+              <h3>Project Title</h3>
+              <p>Brief description of the project goes here.</p>
+            </div>
+          </a>
+        </div>
+
+      
+          
+        </div>
+      </div>
+      <button class="nav-button next" onclick="nextSlide()">•</button>
+    </div>
+  </section>
+  <footer class="container">
+    <span class="blur"></span>
+    <span class="blur"></span>
+    <div class="column">
+        <div class="logo">
+            <img src="images/1.png">
+        </div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+        <div class="socials">
+            <a href="#"><i class="ri-linkedin-line"></i></a>
+            <a href="#"><i class="ri-github-line"></i></a>
+ 
+        </div>
+    </div>
+    <div class="column">
+        <h4>Company</h4>
+        <a href="#">Business</a>
+        <a href="#">Partnership</a>
+        <a href="#">Network</a>
+    </div>
+    <div class="column">
+        <h4>About Us</h4>
+        <a href="#">Blogs</a>
+        <a href="#">Channels</a>
+        <a href="#">Sponsors</a>
+    </div>
+    <div class="column">
+        <h4>Contact</h4>
+        <a href="#">Contact Us</a>
+        <a href="#">Privicy Policy</a>
+        <a href="#">Terms & Conditions</a>
+    </div>
+</footer>
 
 
-    <script src="script.js"></script>
 
+<script src="script.js"></script>
 </body>
+
 
 </html>
