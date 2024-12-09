@@ -148,3 +148,56 @@ header .image img {
     margin: auto;
 }
 
+.projects-section {
+    text-align: center;
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  
+  .projects-wrapper {
+    overflow: hidden;
+    width: 80%; /* Ajusta según el diseño */
+    box-sizing: border-box;
+  }
+  
+  .projects-container {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+    will-change: transform;
+  }
+  
+  .project-card {
+    flex: 0 0 calc((100% - 24px) / 4); /* 4 tarjetas visibles sin cortes */
+    background: #2c2c2c;
+    color: white;
+    border-radius: 8px;
+    padding: 16px;
+    box-sizing: border-box; /* Incluye padding y border en el ancho */
+    margin-right: 8px;
+  }
+  
+  .project-card:last-child {
+    margin-right: 0; /* Asegurarse de que la última tarjeta no tenga margen adicional */
+  }
+  
+  button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  button:disabled {
+    color: gray;
+    cursor: not-allowed;
+  }
