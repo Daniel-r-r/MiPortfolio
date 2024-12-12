@@ -303,14 +303,6 @@ footer .column > a:hover {
     color: #1d4ed8;
 }
 
-.copyright {
-    max-width: 1200px;
-    margin: auto;
-    padding: 1rem;
-    color: #fff;
-    font-size: 0.8rem;
-    text-align: center;
-}
 
 
 /* Para pantallas medianas (3 proyectos visibles) */
@@ -360,3 +352,85 @@ footer .column > a:hover {
         grid-template-columns: 1fr 150px;
     }
 }
+
+
+/******************CONOCIMIENTOS********************/
+
+.skills-section {
+    padding: 5rem 2rem;
+    position: relative;
+  }
+  
+  .carousel-3d-container {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    margin: 50px auto;
+    perspective: 1000px;
+  }
+  
+  .carousel-3d {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+  }
+  
+  .carousel-item {
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    left: 50px;
+    top: 25px;
+    transform-origin: 50% 100%;
+    transition: all 0.5s;
+    opacity: 1;
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .description {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .carousel-item:hover .description {
+    display: block;
+    opacity: 1;
+  }
+  
+  .carousel-item:hover {
+    transform: scale(1.1) translateZ(100px);
+  }
+  
+  @media (max-width: 768px) {
+    .carousel-3d-container {
+      width: 200px;
+      height: 150px;
+    }
+    .carousel-item {
+      width: 100px;
+      height: 75px;
+      left: 50px;
+      top: 37.5px;
+    }
+  }
+  
+  /* Posicionamiento dinámico basado en la cantidad de elementos */
+  .carousel-3d > .carousel-item {
+    transform: rotateY(calc(var(--angle) * var(--i))) translateZ(var(--radius));
+  }

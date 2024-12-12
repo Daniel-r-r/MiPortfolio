@@ -65,3 +65,42 @@ function handleResize() {
 
 window.addEventListener('resize', handleResize);
 window.addEventListener('load', updateCarousel);
+
+
+/****conocimientos */
+
+document.addEventListener('DOMContentLoaded', () => {
+  const carousel = document.querySelector('.carousel-3d');
+  const items = carousel.querySelectorAll('.carousel-item');
+  let angle = 0;
+  let animationFrameId = null;
+
+  // Calcular el ángulo y el radio basado en el número de elementos
+  const totalItems = items.length;
+  const anglePerItem = 360 / totalItems;
+  const radius = 288; // Ajusta este valor según el tamaño deseado del carrusel
+
+  items.forEach((item, index) => {
+    item.style.setProperty('--i', index);
+    item.style.setProperty('--angle', `-${anglePerItem}deg`);
+    item.style.setProperty('--radius', `${radius}px`);
+  });
+
+  function rotateCarousel() {
+    angle += 0.5; // Ajusta la velocidad de rotación aquí
+    carousel.style.transform = `rotateY(${angle}deg)`;
+    animationFrameId = requestAnimationFrame(rotateCarousel);
+  }
+
+  // Iniciar la rotación automática
+  rotateCarousel();
+
+  // Manejo de eventos para detener y reanudar la rotación
+  carousel.addEventListener('mouseenter', () => {
+    cancelAnimationFrame(animationFrameId); // Detener la animación
+  });
+
+  carousel.addEventListener('mouseleave', () => {
+    rotateCarousel(); // Reanudar la animación
+  });
+});
