@@ -104,3 +104,23 @@ document.addEventListener('DOMContentLoaded', () => {
     rotateCarousel(); // Reanudar la animación
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const techCategories = document.querySelectorAll(".tecnologia-categoria");
+  
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = "translateY(0)";
+      }
+    });
+  }, { threshold: 0.1 });
+  
+  techCategories.forEach(category => {
+    category.style.opacity = 0;
+    category.style.transform = "translateY(50px)";
+    observer.observe(category);
+  });
+});
+

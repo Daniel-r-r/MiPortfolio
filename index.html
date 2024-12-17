@@ -26,8 +26,31 @@
       <li class="link"><a href="#">Proyectos</a></li>
       <li class="link"><a href="#">Sobre Mí</a></li>
     </ul>
-    <button class="btn">Contáctame</button>
+    <button class="btn" onclick="downloadCV()">Contáctame</button>
+    <!-- Enlace invisible para la descarga -->
+    <a id="download-link" href="C:\Users\danie\Desktop\RomeroPortfolio\assest.pdf" download="RomeroDaniel_CV2411.pdf" style="display: none;"></a>
   </nav>
+
+  <script>
+    function downloadCV() {
+        // Activa el enlace para descargar el CV
+        document.getElementById('download-link').click();
+        openContactForm();
+    }
+</script>
+
+  <script>
+    window.addEventListener("scroll", () => {
+      const nav = document.querySelector("nav");
+
+      if (window.scrollY > 50) {
+        nav.classList.add("scroll"); // Se agrega la clase al hacer scroll
+      } else {
+        nav.classList.remove("scroll"); // Se elimina si vuelves al inicio
+      }
+    });
+  </script>
+
 
   <header class="container">
     <div class="content">
@@ -123,7 +146,7 @@
     <div class="carousel-3d-container">
       <div class="carousel-3d">
         <div class="carousel-item" data-tech="html5">
-          <img src="images/1.png" alt="HTML5">
+          <img src="images/java.webp" alt="HTML5">
           <div class="description">Experto en estructuración de páginas web</div>
         </div>
         <div class="carousel-item" data-tech="css3">
@@ -155,6 +178,92 @@
   </section>
 
 
+  <section id="tecnologias">
+    <h2>Tecnologías</h2>
+
+    <!-- Contenedor Principal -->
+    <div class="tech-container">
+
+      <!-- Sección Frontend -->
+      <div class="tecnologia-categoria">
+        <h3>Frontend</h3>
+        <div class="tech-items">
+          <div class="tech">
+            <img src="images/html.png" alt="HTML">
+            <span>HTML</span>
+          </div>
+          <div class="tech">
+            <img src="images/css.png" alt="CSS">
+            <span>CSS</span>
+          </div>
+          <div class="tech">
+            <img src="images/js.png" alt="JavaScript">
+            <span>JavaScript</span>
+          </div>
+          <div class="tech">
+            <img src="images/react.png" alt="ReactJS">
+            <span>ReactJS</span>
+          </div>
+          <div class="tech">
+            <img src="images/tailwind.png" alt="TailwindCSS">
+            <span>TailwindCSS</span>
+          </div>
+          <div class="tech">
+            <img src="images/sass.png" alt="SASS">
+            <span>SASS</span>
+          </div>
+          <div class="tech">
+            <img src="images/figma.png" alt="Figma">
+            <span>Figma</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sección Backend -->
+      <div class="tecnologia-categoria">
+        <h3>Backend</h3>
+        <div class="tech-items">
+          <div class="tech">
+            <img src="images/1.png" alt="Python">
+            <span>Python</span>
+          </div>
+          <div class="tech">
+            <img src="images/1.png" alt="NodeJS">
+            <span>NodeJS</span>
+          </div>
+          <div class="tech">
+            <img src="images/1.png" alt="Laravel">
+            <span>Laravel</span>
+          </div>
+          <div class="tech">
+            <img src="images/1.png" alt="ExpressJS">
+            <span>ExpressJS</span>
+          </div>
+          <div class="tech">
+            <img src="images/1.png" alt="MySQL">
+            <span>MySQL</span>
+          </div>
+          <div class="tech">
+            <img src="images/1.png" alt="MongoDB">
+            <span>MongoDB</span>
+          </div>
+          <div class="tech">
+            <img src="images/1.png" alt="Nginx">
+            <span>Nginx</span>
+          </div>
+          <div class="tech">
+            <img src="images/1.png" alt="Apache">
+            <span>Apache</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
   <footer class="container">
     <span class="blur"></span>
     <span class="blur"></span>
@@ -166,8 +275,8 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </p>
       <div class="socials">
-        <a href="#"><i class="ri-linkedin-line"></i></a>
-        <a href="#"><i class="ri-github-line"></i></a>
+        <a href="https://www.linkedin.com/in/daniel-romero-reyes-70708a272/"><i class="ri-linkedin-line"></i></a>
+        <a href="https://github.com/Daniel-r-r"><i class="ri-github-line"></i></a>
 
       </div>
     </div>

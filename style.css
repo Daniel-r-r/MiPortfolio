@@ -1,3 +1,4 @@
+/* Reset y configuraciones previas */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 * {
@@ -9,7 +10,7 @@
 }
 
 img {
-    width: 100%;
+    width: 80%;
     display: flex;
 }
 
@@ -20,22 +21,46 @@ a {
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #18181b;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    background-color: #18181b;
+    color: white;
+    padding-top: 80px; /* Añadido padding-top para que el contenido no quede bajo la barra */
 }
 
+/* Nav fijo */
 nav {
+    width: 100%;
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
     padding: 2rem 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
+    position: fixed; /* Se fija en la pantalla */
+    top: 0;
+    left: 50%; /* Centra el nav */
+    transform: translateX(-50%);
+    background-color: transparent; /* Transparente al inicio */
+    transition: all 0.3s ease; /* Transición suave */
+    z-index: 1000;
 }
 
+/* Clase que se agrega al hacer scroll */
+nav.scroll {
+    background-color: rgba(24, 24, 27, 0.8); /* Fondo semi-transparente */
+    backdrop-filter: blur(10px); /* Desenfoque */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para marcar el límite */
+    padding: 1rem 1rem; /* Reduce el padding al hacer scroll */
+}
+
+/* Logo */
 .nav-logo {
     max-width: 100px;
 }
 
+/* Links */
 .nav-links {
     list-style: none;
     display: flex;
@@ -64,6 +89,7 @@ nav {
     width: 70%;
 }
 
+/* Botón */
 .btn {
     padding: 1rem 2rem;
     font-size: 1rem;
@@ -77,6 +103,7 @@ nav {
 .btn:hover {
     background-color: #1e40af;
 }
+
 
 .container {
     max-width: 1200px;
@@ -434,3 +461,84 @@ footer .column > a:hover {
   .carousel-3d > .carousel-item {
     transform: rotateY(calc(var(--angle) * var(--i))) translateZ(var(--radius));
   }
+
+  /*****************************/
+  
+
+  /* Sección General */
+#tecnologias {
+    font-family: Arial, sans-serif;
+    color: #f0f0f0;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #00aaff;
+  }
+  
+  /* Contenedor Principal */
+  .tech-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Responsividad: Se apilan en pantallas pequeñas */
+  @media (max-width: 768px) {
+    .tech-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Estilo de Categorías */
+  .tecnologia-categoria {
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    background: transparent;
+    backdrop-filter: blur(10px);
+  }
+  
+  h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #00d9ff;
+  }
+  
+  /* Grid para las Tecnologías */
+  .tech-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 20px;
+    justify-items: center;
+  }
+  
+  .tech {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .tech:hover {
+    transform: scale(1.1); /* Pequeño zoom */
+  }
+  
+  .tech img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+  }
+  
+  .tech span {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  
