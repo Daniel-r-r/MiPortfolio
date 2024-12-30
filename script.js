@@ -124,3 +124,25 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+ // Función para activar la descarga del CV
+ function downloadCV() {
+  // Se activa el enlace invisible para descargar el CV
+  document.getElementById('download-link').click();
+  
+  // Aquí se podría activar un formulario de contacto u otra acción si es necesario
+  openContactForm();
+}
+
+// Función para cambiar el estilo de la barra de navegación al hacer scroll
+window.addEventListener("scroll", () => {
+  const nav = document.querySelector("nav");
+
+  // Si el usuario hace scroll hacia abajo, se agrega una clase a la barra de navegación
+  if (window.scrollY > 50) {
+    nav.classList.add("scroll");
+  } else {
+    // Si vuelve al principio, se quita la clase
+    nav.classList.remove("scroll");
+  }
+});
+
